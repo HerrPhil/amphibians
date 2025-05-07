@@ -1,6 +1,6 @@
 # Amphibians
 
-## Purpuse of Project
+## Purpose of Project
 
 The main goals were to connect to the internet, utilize retrofit for an API service, add a repository layer, and implement dependency injection to aid in testing.
 
@@ -15,6 +15,7 @@ The recipe of the general steps to do this follow.
 4. First goal: show a Text composable with "Success: 5 amphibians retrieved".
 5. Base classes to create to start journey:
 
+```
    com.example.amphibians
        ui
            screens
@@ -23,6 +24,7 @@ The recipe of the general steps to do this follow.
            themes ...
            AmphibianApp.kt
        MainActivity.kt
+```
 
 6. Add retrofit dependencies.
 7. Start connecting to the internet. Create a file, AmphibianApiService. Define BASE_URL. Create retrofit constant (val) with Builder(). Add the Scalars Converter Factory. Define API interface (@GET). Use object declaration to create AmphibianApi singleton. The singleton lazily initializes AmphibianApiService; use retrofit.create().
@@ -93,4 +95,4 @@ Success is a data class, and the other two are object classes.
 55. Resolve top padding issue by passing calculateTopPadding() value to PhotoGridScreen, apply this modifier only to LazyVerticalGrid(), and pass Modifier + card settings to AmphibianPhotoCard().
 56. Re-factor ErrorScreen to provide "Retry" feature.
 57. Add remaining text() data to each Card()
-    *learned that Modifier.aspectRatio(1.5f) passed to the card messes up Card() height calculations when there are other Composable components in the Card.
+    * learned that Modifier.aspectRatio(1.5f) passed to the card messes up Card() height calculations when there are other Composable components in the Card.
