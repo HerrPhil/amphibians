@@ -75,9 +75,11 @@ Success is a data class, and the other two are object classes.
 
     As a lazy vertical grid of Card compostables where each card is:
 
+```
     <name> (<type>)
     <image>
     <description>
+```
 
     One column, many rows.
 
